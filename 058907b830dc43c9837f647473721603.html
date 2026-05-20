@@ -1,0 +1,189 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Operator Context - Product Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Geist:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "secondary": "#0051d5",
+                            "on-surface-variant": "#47464a",
+                            "bg-base": "#F7F5F2",
+                            "on-secondary-fixed": "#00174b",
+                            "bg-surface": "#F4F4F5",
+                            "tertiary": "#000000",
+                            "on-primary-fixed-variant": "#474649",
+                            "on-secondary-container": "#fefcff",
+                            "inverse-surface": "#313030",
+                            "surface-variant": "#e5e2e1",
+                            "inverse-primary": "#c8c6c8",
+                            "outline": "#09090B",
+                            "surface": "#F7F5F2",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "on-secondary-fixed-variant": "#003ea8",
+                            "surface-container-high": "#ebe7e7",
+                            "primary-fixed-dim": "#c8c6c8",
+                            "on-tertiary-container": "#8a8282",
+                            "surface-container-low": "#f7f3f2",
+                            "on-primary-fixed": "#1c1b1d",
+                            "error": "#ba1a1a",
+                            "on-primary-container": "#858386",
+                            "surface-dim": "#ddd9d9",
+                            "secondary-fixed-dim": "#b4c5ff",
+                            "surface-container": "#f1edec",
+                            "on-tertiary-fixed-variant": "#4c4545",
+                            "background": "#F7F5F2",
+                            "surface-bright": "#fdf8f8",
+                            "secondary-container": "#316bf3",
+                            "primary": "#000000",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-tint": "#5f5e60",
+                            "on-background": "#1c1b1b",
+                            "on-primary": "#ffffff",
+                            "on-error": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "border-muted": "#09090B",
+                            "surface-container-highest": "#e5e2e1",
+                            "on-tertiary-fixed": "#1f1a1a",
+                            "inverse-on-surface": "#f4f0ef",
+                            "text-secondary": "#000000",
+                            "outline-variant": "#09090B",
+                            "on-surface": "#1c1b1b",
+                            "tertiary-fixed-dim": "#cec4c4",
+                            "tertiary-container": "#1f1a1a",
+                            "tertiary-fixed": "#ebe0df",
+                            "primary-fixed": "#e5e1e4",
+                            "secondary-fixed": "#dbe1ff",
+                            "primary-container": "#1c1b1d"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0rem",
+                            "lg": "0rem",
+                            "xl": "0rem",
+                            "full": "0px"
+                    },
+                    "spacing": {
+                            "tight": "8px",
+                            "medium": "24px",
+                            "generous": "64px",
+                            "base": "8px"
+                    },
+                    "fontFamily": {
+                            "header-h2": ["Inter"],
+                            "display-h1": ["Inter"],
+                            "subheader-h3": ["Inter"],
+                            "body-primary": ["Inter"],
+                            "mono-data": ["Geist"],
+                            "display-h1-mobile": ["Inter"],
+                            "body-secondary": ["Inter"]
+                    },
+                    "fontSize": {
+                            "header-h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "display-h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "subheader-h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                            "body-primary": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                            "mono-data": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                            "display-h1-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "body-secondary": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Force true flat design override */
+        * { border-radius: 0 !important; }
+        .text-header-h2 { letter-spacing: -0.01em; }
+        .text-display-h1 { letter-spacing: -0.02em; }
+    </style>
+</head>
+<body class="bg-[#F7F5F2] text-primary font-body-primary antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-[#F7F5F2] docked full-width top-0 border-b border-[#09090B] flat no shadows flex justify-between items-center w-full px-medium md:px-generous h-16 max-w-full z-50 sticky">
+<div class="font-header-h2 text-header-h2 font-black tracking-tighter text-primary">
+            PRODUCT BUILDER
+        </div>
+<div class="hidden md:flex space-x-medium font-body-secondary text-body-secondary items-center">
+<a class="text-primary hover:text-primary transition-colors duration-200 active:scale-95 transition-transform py-tight" href="#">Projects</a>
+<a class="text-primary hover:text-primary transition-colors duration-200 active:scale-95 transition-transform py-tight" href="#">Stack</a>
+<a class="text-primary hover:text-primary transition-colors duration-200 active:scale-95 transition-transform py-tight" href="#">Archive</a>
+<a class="text-primary font-bold border-b-2 border-primary hover:text-primary transition-colors duration-200 active:scale-95 transition-transform py-tight" href="#">Context</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary text-on-primary font-body-secondary text-body-secondary px-medium py-tight active:scale-95 transition-transform hover:bg-inverse-surface border border-primary">
+                Connect
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="w-full max-w-7xl mx-auto px-medium md:px-generous flex-grow">
+<!-- Header Section -->
+<header class="py-24 border-b border-[#09090B]">
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-primary mb-tight">
+                Operator Context
+            </h1>
+<p class="font-subheader-h3 text-subheader-h3 text-primary font-bold max-w-3xl">
+                Why I build the way I build.
+            </p>
+</header>
+<!-- Split-Pane Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2">
+<!-- Left Column -->
+<section class="p-medium md:p-generous border-b md:border-b-0 md:border-r border-[#09090B] flex-1">
+<h2 class="font-header-h2 text-header-h2 text-primary mb-medium">
+                    The Origin
+                </h2>
+<div class="font-body-primary text-body-primary text-primary space-y-medium">
+<p>
+                        Domvio wasn't a whiteboard idea. It came from watching family members manage rental properties through a mess of WhatsApp messages, missed payments, and no paper trail. The problem was real before the product existed.
+                    </p>
+<p>
+                        No formal engineering background meant one thing: if I couldn't ship it using AI tools as leverage, it didn't get built. That constraint became the workflow.
+                    </p>
+<p>The constraint of having no engineering background forced a different kind of rigor. Every feature had to be justified by landlord behavior, not technical curiosity. That filter — does this remove a real friction point or not — became the only product principle that mattered.</p></div>
+</section>
+<!-- Right Column -->
+<section class="flex flex-col">
+<!-- Block 1 -->
+<article class="p-medium md:p-generous border-b border-[#09090B] flex-1">
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary mb-tight">
+                        Market Psychology
+                    </h3>
+<p class="font-body-primary text-body-primary text-primary">
+                        Execution requires seeing markets without wishful thinking. Understanding where capital actually flows — not where founders hope it flows — is the difference between building real utility and building for a market that doesn't exist.
+                    </p>
+</article>
+<!-- Block 2 -->
+<article class="p-medium md:p-generous flex-1">
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary mb-tight">
+                        On Growth
+                    </h3>
+<p class="font-body-primary text-body-primary text-primary">
+                        Growth is not a department. It's the feedback loop between product and distribution. The fastest way to learn what a market wants is to put something in front of it and measure what happens. Then cut what doesn't move.
+                    </p>
+</article>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F7F5F2] full-width border-t border-[#09090B] flat no shadows flex flex-col md:flex-row justify-between items-center w-full px-medium md:px-generous py-generous mt-generous transition-all duration-150">
+<div class="font-header-h2 text-header-h2 font-black text-primary mb-medium md:mb-0">
+            GIRIDHAR REDDY
+        </div>
+<div class="flex space-x-medium font-mono-data text-mono-data uppercase tracking-widest mb-medium md:mb-0">
+<a class="text-primary hover:text-secondary transition-colors" href="#">Twitter</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#">LinkedIn</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#">GitHub</a>
+</div>
+<div class="font-mono-data text-mono-data uppercase tracking-widest text-primary">
+            © 2026. OPTIMIZED FOR EXECUTION.
+        </div>
+</footer>
+</body></html>
