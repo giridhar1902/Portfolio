@@ -1,0 +1,321 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Domvio - Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#4c4545",
+                      "on-primary-container": "#858386",
+                      "surface-container-low": "#f7f3f2",
+                      "outline": "#78767b",
+                      "border-muted": "#E4E4E7",
+                      "surface-container": "#f1edec",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "on-secondary-fixed": "#00174b",
+                      "inverse-on-surface": "#f4f0ef",
+                      "bg-base": "#FFFFFF",
+                      "secondary": "#0051d5",
+                      "surface-dim": "#ddd9d9",
+                      "primary-fixed": "#e5e1e4",
+                      "primary-container": "#1c1b1d",
+                      "surface-container-high": "#ebe7e7",
+                      "secondary-fixed": "#dbe1ff",
+                      "surface-bright": "#fdf8f8",
+                      "inverse-surface": "#313030",
+                      "tertiary-container": "#1f1a1a",
+                      "primary-fixed-dim": "#c8c6c8",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "background": "#F7F5F2", // overriding to match prompt request for off-white
+                      "on-surface": "#1c1b1b",
+                      "error": "#ba1a1a",
+                      "text-secondary": "#71717A",
+                      "surface-tint": "#5f5e60",
+                      "surface-container-lowest": "#ffffff",
+                      "bg-surface": "#F4F4F5",
+                      "on-background": "#1c1b1b",
+                      "tertiary-fixed-dim": "#cec4c4",
+                      "tertiary": "#000000",
+                      "inverse-primary": "#c8c6c8",
+                      "on-primary-fixed-variant": "#474649",
+                      "surface": "#fdf8f8",
+                      "on-primary": "#ffffff",
+                      "primary": "#000000",
+                      "on-tertiary-fixed": "#1f1a1a",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#316bf3",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#47464a",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#1c1b1d",
+                      "surface-variant": "#e5e2e1",
+                      "on-secondary-container": "#fefcff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2e1",
+                      "outline-variant": "#c8c5ca",
+                      "tertiary-fixed": "#ebe0df",
+                      "on-tertiary-container": "#8a8282",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "none": "0px" // explicit zero decoration
+              },
+              "spacing": {
+                      "base": "8px",
+                      "tight": "8px",
+                      "generous": "64px",
+                      "medium": "24px"
+              },
+              "fontFamily": {
+                      "mono-data": [
+                              "Inter" // Swapped to Inter to match prompt "Inter font, zero decoration" for all
+                      ],
+                      "subheader-h3": [
+                              "Inter"
+                      ],
+                      "header-h2": [
+                              "Inter"
+                      ],
+                      "body-secondary": [
+                              "Inter"
+                      ],
+                      "body-primary": [
+                              "Inter"
+                      ],
+                      "display-h1": [
+                              "Inter"
+                      ],
+                      "display-h1-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "mono-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "subheader-h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "header-h2": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-secondary": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-primary": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-h1": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-h1-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-primary font-body-primary min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="w-full top-0 sticky border-b border-primary dark:border-outline flat no shadows bg-background dark:bg-inverse-surface z-50">
+<div class="flex justify-between items-center px-generous py-base w-full max-w-full">
+<div class="font-header-h2 text-header-h2 font-bold tracking-tighter text-primary dark:text-on-primary-fixed">
+                GIRIDHAR REDDY
+            </div>
+<!-- Web Navigation -->
+<ul class="hidden md:flex gap-medium font-body-primary text-body-primary">
+<li class="text-secondary font-bold border-b-2 border-secondary pb-1 hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80">Domvio</li>
+<li class="text-on-surface dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 pb-1">Stack</li>
+<li class="text-on-surface dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 pb-1">Archive</li>
+<li class="text-on-surface dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 pb-1">Context</li>
+</ul>
+<button class="bg-primary text-on-primary font-mono-data text-mono-data px-medium py-tight rounded-none cursor-pointer active:opacity-80">
+                Connect
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col w-full max-w-7xl mx-auto px-medium md:px-generous py-generous gap-generous">
+<!-- Header Section -->
+<section class="flex flex-col gap-medium pt-generous border-b border-primary pb-generous">
+<div class="font-mono-data text-mono-data uppercase text-surface-tint tracking-widest">
+                CASE STUDY — 2026
+            </div>
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-primary">
+                Domvio
+            </h1>
+<p class="font-subheader-h3 text-subheader-h3 text-primary max-w-3xl">
+                WhatsApp-First Rent Collection for Indian Small Landlords
+            </p>
+<div class="mt-base">
+<span class="inline-block bg-primary text-on-primary font-mono-data text-mono-data px-tight py-base rounded-none">
+                    PHASE 1 — ACTIVE
+                </span>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-medium w-full">
+<div class="border border-primary rounded-none p-medium flex flex-col gap-tight bg-bg-base">
+<div class="font-display-h1-mobile text-display-h1-mobile text-primary">100+</div>
+<div class="font-mono-data text-mono-data text-surface-tint">Landlords Waitlisted</div>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-tight bg-bg-base">
+<div class="font-display-h1-mobile text-display-h1-mobile text-primary">12 Weeks</div>
+<div class="font-mono-data text-mono-data text-surface-tint">Core Loop Built</div>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-tight bg-bg-base">
+<div class="font-display-h1-mobile text-display-h1-mobile text-primary">₹0</div>
+<div class="font-mono-data text-mono-data text-surface-tint">Paid Acquisition Cost</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="flex flex-col md:flex-row gap-medium md:gap-generous border-t border-primary pt-generous">
+<div class="md:w-1/3">
+<h2 class="font-header-h2 text-header-h2 text-primary">The Problem</h2>
+</div>
+<div class="md:w-2/3">
+<p class="font-body-primary text-body-primary text-on-surface">
+                    Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don't exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
+                </p>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="flex flex-col gap-medium border-t border-primary pt-generous">
+<h2 class="font-header-h2 text-header-h2 text-primary">The Core Loop</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium items-center">
+<div class="flex flex-col gap-medium">
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight">01 / REMIND</div>
+<div class="font-body-primary text-body-primary pt-tight">Automated WhatsApp reminder sent on schedule</div>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight">02 / COLLECT</div>
+<div class="font-body-primary text-body-primary pt-tight">UPI payment link in the same thread</div>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight">03 / RECEIPT</div>
+<div class="font-body-primary text-body-primary pt-tight">Auto-generated receipt sent on confirmation</div>
+</div>
+</div>
+<div class="flex justify-center items-center">
+<img alt="WhatsApp rent collection interface" class="max-w-full h-auto max-h-[600px] object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAnfK10M_rxDOF2r2jpziX_PQn4PEO1E4lnOXwbfy7xQtcMSWP6yNw72tcp70ZkFYJVkrzgkdGIfvVwIuKJgns4s4XBNqGiaZo8P7JkR3_2J4Urfvy3GGOu_gwyeBuDSxrG82KpXymeI-sIH9kkMiZqTucYlVHWCJ4VPcXuNZF3RmQ9hKNyZ0YvgMxjb06YcnXYY3qfxIN6vcHFdgCyl5yz91dThIFEC027jVgT-UtNjco4EEjsF5qOc3mHITihkXqjgvMZ-JSvN4">
+</div>
+</div>
+</section>
+<!-- Distribution Section -->
+<section class="flex flex-col md:flex-row gap-medium md:gap-generous border-t border-primary pt-generous">
+<div class="md:w-1/3">
+<h2 class="font-header-h2 text-header-h2 text-primary">How 100 Landlords Found It</h2>
+</div>
+<div class="md:w-2/3">
+<p class="font-body-primary text-body-primary text-on-surface">
+                    Zero paid acquisition. Built a LinkedIn content system documenting the build in public. WhatsApp Channel for direct audience. Organic only. 100+ waitlist before Phase 1 launch.
+                </p>
+</div>
+</section>
+<!-- Stack Section -->
+<section class="flex flex-col gap-medium border-t border-primary pt-generous pb-generous">
+<h2 class="font-header-h2 text-header-h2 text-primary">What It's Built On</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium border border-primary p-medium bg-bg-base">
+<ul class="font-mono-data text-mono-data flex flex-col gap-tight">
+<li class="">+ React 19 + Vite</li>
+<li class="">+ NestJS + Prisma</li>
+<li class="">+ Supabase</li>
+<li class="">+ Railway + Vercel</li>
+</ul>
+<ul class="font-mono-data text-mono-data flex flex-col gap-tight">
+<li class="">+ WhatsApp Business API</li>
+<li class="">+ Interakt</li>
+<li class="">+ Razorpay UPI</li>
+<li class="">+ Claude API</li>
+</ul>
+</div>
+</section><section class="flex flex-col gap-medium border-t border-primary pt-generous pb-generous">
+<div class="flex flex-col gap-tight">
+<h2 class="font-header-h2 text-header-h2 text-primary">What the Waitlist Taught Me</h2>
+<p class="font-body-secondary text-body-secondary text-surface-tint">Observations from 0 to 100+ landlords with no paid acquisition.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium">
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase">01 / CHANNEL</div>
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary">LinkedIn Outperformed Everything</h3>
+<p class="font-body-primary text-body-primary text-on-surface">One post — 'Everyone told me to build an app. You can't run a SaaS on WhatsApp.' — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.</p>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase">02 / MESSAGING</div>
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary">Features Don't Convert. Friction Does.</h3>
+<p class="font-body-primary text-body-primary text-on-surface">Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don't care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.</p>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase">03 / TIMING</div>
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary">Distribution Before Product</h3>
+<p class="font-body-primary text-body-primary text-on-surface">The waitlist was built before Phase 1 was complete. Starting distribution early — even with nothing to sell — meant the first version launched into an audience that had already self-selected. No launch cold start.</p>
+</div>
+<div class="border border-primary rounded-none p-medium flex flex-col gap-base bg-bg-base">
+<div class="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase">04 / ITERATION</div>
+<h3 class="font-subheader-h3 text-subheader-h3 text-primary">Engagement Tells You What to Build</h3>
+<p class="font-body-primary text-body-primary text-on-surface">Comments and DMs on LinkedIn posts became the clearest signal for what the product needed. Two features added to the roadmap came directly from landlord responses to content — not from a survey or user interview session.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-generous border-t border-primary dark:border-outline flat no shadows bg-background dark:bg-inverse-surface mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-generous w-full gap-medium">
+<div class="font-subheader-h3 text-subheader-h3 font-black text-primary dark:text-on-primary-fixed">
+                GIRIDHAR REDDY
+            </div>
+<div class="font-mono-data text-mono-data uppercase text-primary dark:text-inverse-primary text-center">
+                © 2026 GIRIDHAR REDDY. OPTIMIZED FOR EXECUTION.
+            </div>
+<div class="flex gap-medium font-mono-data text-mono-data uppercase">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer" href="#">GitHub</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>
