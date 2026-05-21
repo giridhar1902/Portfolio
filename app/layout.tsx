@@ -14,8 +14,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Domvio Case Study",
-  description: "WhatsApp-First Rent Collection for Indian Small Landlords",
+  title: "Portfolio",
+  description: "Product Builder Portfolio",
 };
 
 export default function RootLayout({
