@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        mono: ['Geist Mono', 'monospace'],
       },
       spacing: {
         '1': '8px',
@@ -24,11 +25,13 @@ const config: Config = {
         '16': '128px',
       },
       colors: {
-        background: '#fbf9f6',
-        surface: '#fbf9f6',
-        primary: '#0a0a0a',
-        accent: '#2563eb',
-        muted: '#d4d0c8',
+        'bg-base': 'var(--bg-base)',
+        'bg-surface': 'var(--bg-surface)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        accent: 'var(--accent)',
+        'border-base': 'var(--border-base)',
+        'border-muted': 'var(--border-muted)',
       },
     },
   },
