@@ -2,50 +2,101 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Inter } from "next/font/google";
+
+const inter800 = Inter({ subsets: ["latin"], weight: ["800"] });
+const inter400 = Inter({ subsets: ["latin"], weight: ["400"] });
+const inter700 = Inter({ subsets: ["latin"], weight: ["700"] });
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+
+  // Adjust links exactly as prompt said: Domvio / Stack / Archive / Context / About
+  const exactLinks = [
+    { name: "Domvio", href: "/" },
+    { name: "Stack", href: "/stack" },
+    { name: "Archive", href: "/archive" },
+    { name: "Context", href: "/context" },
+    { name: "About", href: "/about" },
+  ];
 
   return (
     <>
-      <nav className="w-full top-0 sticky bg-bg-base border-b border-border-base z-50">
+      <nav className="w-full top-0 sticky bg-bg-base border-b border-border-muted z-50 shadow-none">
         <div className="flex justify-between items-center w-full px-4 py-2 max-w-7xl mx-auto">
-          <div className="text-xl font-bold tracking-tighter text-text-primary">
+          {/* Left */}
+          <div className={`${inter800.className} text-[var(--text-primary)] text-xl tracking-tighter`}>
             <Link href="/">GIRIDHAR REDDY</Link>
           </div>
-          <div className="hidden md:flex space-x-4">
-            <Link className="text-text-primary font-bold border-b-2 border-transparent hover:border-border-base pb-1" href="/">Projects</Link>
-            <Link className="text-text-primary font-bold border-b-2 border-transparent hover:border-border-base pb-1" href="/stack">Stack</Link>
-            <Link className="text-text-primary font-bold border-b-2 border-transparent hover:border-border-base pb-1" href="/archive">Archive</Link>
-            <Link className="text-text-primary font-bold border-b-2 border-transparent hover:border-border-base pb-1" href="/about">About</Link>
+
+          {/* Center */}
+          <div className="hidden md:flex space-x-6">
+            {exactLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`${inter400.className} text-[14px] text-[var(--text-primary)] pb-1 ${
+                    isActive ? "border-b-2 border-accent" : "border-b-2 border-transparent"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
-          <button className="hidden md:block bg-text-primary text-bg-base px-4 py-2 font-bold hover:bg-bg-surface hover:text-text-primary transition-colors border border-border-base">
-            Connect
-          </button>
-          <button
-            className="md:hidden text-text-primary font-bold tracking-widest uppercase border border-border-base px-2 py-1"
-            onClick={() => setIsMenuOpen(true)}
+
+          {/* Right */}
+          <a
+            href="mailto:giridhar123reddy@gmail.com"
+            className="hidden md:block bg-[var(--text-primary)] text-white px-4 py-2 rounded-none hover:opacity-90 transition-opacity text-sm"
           >
-            [ MENU ]
+            Connect
+          </a>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
+            onClick={() => setIsMenuOpen(true)}
+            aria-label="Open Menu"
+          >
+            <span className="block w-6 h-0.5 bg-[var(--text-primary)]"></span>
+            <span className="block w-6 h-0.5 bg-[var(--text-primary)]"></span>
+            <span className="block w-6 h-0.5 bg-[var(--text-primary)]"></span>
           </button>
         </div>
       </nav>
 
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-[100] flex flex-col">
-          <div className="flex justify-end p-4 border-b border-border-base">
+        <div className="fixed inset-0 bg-bg-base z-[100] flex flex-col items-center justify-center">
+          <div className="absolute top-4 right-4">
              <button
-              className="text-text-primary font-bold tracking-widest uppercase border border-border-base px-2 py-1"
+              className="text-[var(--text-primary)] p-2"
               onClick={() => setIsMenuOpen(false)}
+              aria-label="Close Menu"
             >
-              [ CLOSE ]
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
             </button>
           </div>
-          <div className="flex flex-col flex-grow">
-            <Link href="/" className="text-4xl font-extrabold text-text-primary border-b border-border-base p-6" onClick={() => setIsMenuOpen(false)}>PROJECTS</Link>
-            <Link href="/stack" className="text-4xl font-extrabold text-text-primary border-b border-border-base p-6" onClick={() => setIsMenuOpen(false)}>STACK</Link>
-            <Link href="/archive" className="text-4xl font-extrabold text-text-primary border-b border-border-base p-6" onClick={() => setIsMenuOpen(false)}>ARCHIVE</Link>
-            <Link href="/about" className="text-4xl font-extrabold text-text-primary border-b border-border-base p-6" onClick={() => setIsMenuOpen(false)}>ABOUT</Link>
+          <div className="flex flex-col space-y-8 text-center">
+            {exactLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`${inter700.className} text-[32px] text-[var(--text-primary)]`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       )}
