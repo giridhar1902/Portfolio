@@ -1,13 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --bg-base: #F7F5F2;
-  --bg-surface: #EDEBE7;
-  --text-primary: #0A0A0A;
-  --text-secondary: #6B6B6B;
-  --accent: #2563EB;
-  --border-base: #0A0A0A;
-  --border-muted: #D4D0C8;
+  --bg-base: #FFFFFF;
+  --bg-surface: #F4F4F5;
+  --text-primary: #09090B;
+  --text-secondary: #71717A;
+  --text-subtext: #6B6B6B;
+  --border-base: #09090B;
+  --border-muted: #E4E4E7;
+  --accent-utility: #2563EB;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-subtext: var(--text-subtext);
+  --color-border-base: var(--border-base);
+  --color-border-muted: var(--border-muted);
+  --color-accent-utility: var(--accent-utility);
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
 }
