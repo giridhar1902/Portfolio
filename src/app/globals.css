@@ -1,31 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --bg-base: #FFFFFF;
-  --bg-surface: #F4F4F5;
-  --text-primary: #09090B;
-  --text-secondary: #71717A;
-  --text-subtext: #6B6B6B;
-  --border-base: #09090B;
-  --border-muted: #E4E4E7;
-  --accent-utility: #2563EB;
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+
+  /* Spacing */
+  --spacing-tight: 8px;
+  --spacing-medium: 24px;
+  --spacing-generous: 64px;
+  --spacing-base: 8px;
+
+  /* Typography Sizes & Weights */
+  --text-body-secondary: 14px;
+  --text-body-secondary--line-height: 1.5;
+  --text-body-secondary--font-weight: 400;
+
+  --text-display-h1-mobile: 32px;
+  --text-display-h1-mobile--line-height: 1.2;
+  --text-display-h1-mobile--letter-spacing: -0.02em;
+  --text-display-h1-mobile--font-weight: 800;
+
+  --text-mono-data: 14px;
+  --text-mono-data--line-height: 1.5;
+  --text-mono-data--font-weight: 400;
+
+  --text-subheader-h3: 24px;
+  --text-subheader-h3--line-height: 1.3;
+  --text-subheader-h3--font-weight: 600;
+
+  --text-body-primary: 16px;
+  --text-body-primary--line-height: 1.6;
+  --text-body-primary--font-weight: 400;
+
+  --text-display-h1: 48px;
+  --text-display-h1--line-height: 1.1;
+  --text-display-h1--letter-spacing: -0.02em;
+  --text-display-h1--font-weight: 800;
+
+  --text-header-h2: 32px;
+  --text-header-h2--line-height: 1.2;
+  --text-header-h2--letter-spacing: -0.01em;
+  --text-header-h2--font-weight: 700;
+
+  /* Color Palette overrides to support existing class references in HTML */
+  --color-background: #F7F5F2;
+  --color-primary: #09090B;
+  --color-on-primary: #FFFFFF;
+  --color-bg-base: #FFFFFF;
+  --color-bg-surface: #F4F4F5;
+  --color-border-muted: #E4E4E7;
+  --color-text-secondary: #71717A;
+  --color-surface-container: #f1edec;
+  --color-surface-container-high: #ebe7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-container-low: #f7f3f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary: #2563EB;
+  --color-on-surface-variant: #47464a;
+  --color-surface-tint: #5f5e60;
+  --color-inverse-surface: #313030;
+  --color-inverse-primary: #c8c6c8;
 }
 
-@theme inline {
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-space-mono);
+/* Force true flat design override */
+* {
+  border-radius: 0px !important;
+}
 
-  --color-bg-base: var(--bg-base);
-  --color-bg-surface: var(--bg-surface);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-subtext: var(--text-subtext);
-  --color-border-base: var(--border-base);
-  --color-border-muted: var(--border-muted);
-  --color-accent-utility: var(--accent-utility);
+input, textarea, select {
+  border-radius: 4px !important;
 }
 
 body {
-  background: var(--bg-base);
-  color: var(--text-primary);
+  background-color: #F7F5F2;
+  color: #09090B;
 }
+
+/* Standard focus styles for inputs */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-width: 2px !important;
+  border-color: #2563EB !important;
+}
+

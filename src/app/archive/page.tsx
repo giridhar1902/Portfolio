@@ -1,61 +1,97 @@
 export default function Archive() {
+  const ledger = [
+    {
+      year: "2026",
+      project: "Domvio Core Loop",
+      type: "WhatsApp + UPI Product",
+      status: "Active",
+    },
+    {
+      year: "2026",
+      project: "Domvio Growth Engine",
+      type: "Organic LinkedIn + WhatsApp Channel",
+      status: "Active",
+    },
+    {
+      year: "2025",
+      project: "AI Startup Research Pipeline",
+      type: "Automated Scraping & Structuring",
+      status: "Archived",
+    },
+    {
+      year: "2025",
+      project: "Investor Due Diligence CRM",
+      type: "Notion API + Ops Workflow",
+      status: "Archived",
+    },
+    {
+      year: "2024",
+      project: "Lead Generation Automations",
+      type: "US EdTech Outreach",
+      status: "Archived",
+    },
+  ];
+
   return (
-    <div className="px-4 py-16 space-y-16 max-w-4xl mx-auto">
-      <section className="space-y-6 pt-16">
-        <h1 className="text-[48px] font-[800] text-text-primary leading-tight tracking-tight font-sans">
+    <div className="w-full max-w-7xl mx-auto px-medium md:px-generous flex flex-col flex-grow">
+      
+      {/* Header Section */}
+      <section className="py-24">
+        <h1 className="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-primary mb-tight font-bold">
           Execution Archive
         </h1>
-        <p className="text-[16px] text-[#6B6B6B] font-[400] max-w-2xl leading-relaxed font-sans">
+        <p className="font-body-primary text-body-primary text-text-secondary max-w-2xl">
           A chronological ledger of projects, automation experiments, and operational builds.
         </p>
       </section>
 
-      <section>
-        <div className="w-full">
-            <table className="w-full text-left border-collapse">
-                <thead>
-                    <tr className="border-b border-border-muted font-mono text-[12px] text-[#6B6B6B] uppercase">
-                        <th className="py-4 pr-4 font-normal">YEAR</th>
-                        <th className="py-4 pr-4 font-normal">PROJECT</th>
-                        <th className="py-4 pr-4 font-normal">TYPE</th>
-                        <th className="py-4 font-normal">STATUS</th>
-                    </tr>
-                </thead>
-                <tbody className="font-sans text-[16px] text-[#6B6B6B] font-[400]">
-                    <tr className="border-b border-border-muted">
-                        <td className="py-4 pr-4">2026</td>
-                        <td className="py-4 pr-4 font-[600] text-[#0A0A0A]">Domvio Core Loop</td>
-                        <td className="py-4 pr-4">WhatsApp + UPI Product</td>
-                        <td className="py-4 text-[#2563EB]">Active</td>
-                    </tr>
-                    <tr className="border-b border-border-muted">
-                        <td className="py-4 pr-4">2026</td>
-                        <td className="py-4 pr-4 font-[600] text-[#0A0A0A]">Domvio Growth Engine</td>
-                        <td className="py-4 pr-4">Organic LinkedIn + WhatsApp Channel</td>
-                        <td className="py-4 text-[#2563EB]">Active</td>
-                    </tr>
-                    <tr className="border-b border-border-muted">
-                        <td className="py-4 pr-4">2025</td>
-                        <td className="py-4 pr-4 font-[600] text-[#0A0A0A]">AI Startup Research Pipeline</td>
-                        <td className="py-4 pr-4">Automated Scraping & Structuring</td>
-                        <td className="py-4">Archived</td>
-                    </tr>
-                     <tr className="border-b border-border-muted">
-                        <td className="py-4 pr-4">2025</td>
-                        <td className="py-4 pr-4 font-[600] text-[#0A0A0A]">Investor Due Diligence CRM</td>
-                        <td className="py-4 pr-4">Notion API + Ops Workflow</td>
-                        <td className="py-4">Archived</td>
-                    </tr>
-                    <tr className="border-b border-border-muted">
-                        <td className="py-4 pr-4">2024</td>
-                        <td className="py-4 pr-4 font-[600] text-[#0A0A0A]">Lead Generation Automations</td>
-                        <td className="py-4 pr-4">US EdTech Outreach</td>
-                        <td className="py-4">Archived</td>
-                    </tr>
-                </tbody>
-            </table>
+      {/* Data Table Section */}
+      <section className="pb-generous">
+        <div className="w-full border-y border-primary">
+          
+          {/* Table Header */}
+          <div className="grid grid-cols-12 gap-tight py-tight border-b border-border-muted bg-surface-container-low px-tight font-mono-data text-mono-data text-text-secondary uppercase tracking-widest text-xs hidden md:grid">
+            <div className="col-span-2">YEAR</div>
+            <div className="col-span-5 text-primary">PROJECT</div>
+            <div className="col-span-4">TYPE</div>
+            <div className="col-span-1 text-right">STATUS</div>
+          </div>
+
+          {/* Table Rows */}
+          {ledger.map((item, index) => {
+            const isActive = item.status === "Active";
+            return (
+              <div 
+                key={index} 
+                className="grid grid-cols-12 gap-tight py-medium border-b border-border-muted hover:bg-surface-container-lowest transition-colors px-tight items-start md:items-center last:border-b-0"
+              >
+                <div className="col-span-12 md:col-span-2 font-mono-data text-mono-data text-text-secondary text-sm">
+                  {item.year}
+                </div>
+                <div className="col-span-12 md:col-span-5 font-body-primary text-body-primary font-semibold text-primary">
+                  {item.project}
+                  {/* Status visible on mobile only */}
+                  <span className={`inline-block md:hidden ml-2 font-mono-data text-xs uppercase tracking-wider ${
+                    isActive ? "text-secondary font-bold" : "text-text-secondary"
+                  }`}>
+                    • {item.status}
+                  </span>
+                </div>
+                <div className="col-span-12 md:col-span-4 font-mono-data text-mono-data text-text-secondary text-sm">
+                  {item.type}
+                </div>
+                <div className={`col-span-12 md:col-span-1 font-mono-data text-mono-data text-right text-sm hidden md:block ${
+                  isActive ? "text-secondary font-bold" : "text-text-secondary"
+                }`}>
+                  {item.status}
+                </div>
+              </div>
+            );
+          })}
+
         </div>
       </section>
+
     </div>
   );
 }
