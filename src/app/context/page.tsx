@@ -22,10 +22,10 @@ export default function Context() {
           </h2>
           <div className="font-body-primary text-body-primary text-primary space-y-medium leading-relaxed">
             <p>
-              Domvio wasn't a whiteboard idea. It came from watching family members manage rental properties through a mess of WhatsApp messages, missed payments, and no paper trail. The problem was real before the product existed.
+              Domvio wasn&apos;t a whiteboard idea. It came from watching family members manage rental properties through a mess of WhatsApp messages, missed payments, and no paper trail. The problem was real before the product existed.
             </p>
             <p>
-              No formal engineering background meant one thing: if I couldn't ship it using AI tools as leverage, it didn't get built. That constraint became the workflow.
+              No formal engineering background meant one thing: if I couldn&apos;t ship it using AI tools as leverage, it didn&apos;t get built. That constraint became the workflow.
             </p>
             <p>
               The constraint of having no engineering background forced a different kind of rigor. Every feature had to be justified by landlord behavior, not technical curiosity. That filter — does this remove a real friction point or not — became the only product principle that mattered.
@@ -42,7 +42,7 @@ export default function Context() {
               Market Psychology
             </h3>
             <p className="font-body-primary text-body-primary text-primary leading-relaxed">
-              Execution requires seeing markets without wishful thinking. Understanding where capital actually flows — not where founders hope it flows — is the difference between building real utility and building for a market that doesn't exist.
+              Execution requires seeing markets without wishful thinking. Understanding where capital actually flows — not where founders hope it flows — is the difference between building real utility and building for a market that doesn&apos;t exist.
             </p>
           </article>
 
@@ -52,7 +52,7 @@ export default function Context() {
               On Growth
             </h3>
             <p className="font-body-primary text-body-primary text-primary leading-relaxed">
-              Growth is not a department. It's the feedback loop between product and distribution. The fastest way to learn what a market wants is to put something in front of it and measure what happens. Then cut what doesn't move.
+              Growth is not a department. It&apos;s the feedback loop between product and distribution. The fastest way to learn what a market wants is to put something in front of it and measure what happens. Then cut what doesn&apos;t move.
             </p>
           </article>
 
