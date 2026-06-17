@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import OutputHistoryCard from "../components/OutputHistoryCard";
+
 
 export default function Home() {
   return (
@@ -125,36 +127,18 @@ export default function Home() {
           Output History
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-medium">
-          <div className="border border-primary p-medium bg-bg-surface flex flex-col justify-between min-h-[160px]">
-            <p className="font-body-primary text-body-primary font-bold text-primary">
-              182% Target
-            </p>
-            <div className="mt-auto pt-medium">
-              <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-                Great Learning. Rookie Rockstar Award. First month.
-              </p>
-            </div>
-          </div>
-          <div className="border border-primary p-medium bg-bg-surface flex flex-col justify-between min-h-[160px]">
-            <p className="font-body-primary text-body-primary font-bold text-primary">
-              Top Revenue
-            </p>
-            <div className="mt-auto pt-medium">
-              <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-                Bhanzu. Promoted in 3 months. Rising Star award.
-              </p>
-            </div>
-          </div>
-          <div className="border border-primary p-medium bg-bg-surface flex flex-col justify-between min-h-[160px]">
-            <p className="font-body-primary text-body-primary font-bold text-primary">
-              COO
-            </p>
-            <div className="mt-auto pt-medium">
-              <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-                UnRed. Built investor workflows for early-stage startups.
-              </p>
-            </div>
-          </div>
+          <OutputHistoryCard
+            title="182% Target"
+            description="Great Learning. Rookie Rockstar Award. First month."
+          />
+          <OutputHistoryCard
+            title="Top Revenue"
+            description="Bhanzu. Promoted in 3 months. Rising Star award."
+          />
+          <OutputHistoryCard
+            title="COO"
+            description="UnRed. Built investor workflows for early-stage startups."
+          />
         </div>
       </section>
     </div>
