@@ -52,7 +52,7 @@ export default function Home() {
             <Image
               alt="Wireframe rendering of a WhatsApp chat interface showing a rent reminder and UPI payment link on a minimal smartphone mockup."
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-opacity"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFjnyhb-Xlj6pNgH9t9cnE8hU6ZVt2mTROCSPhPWFuZc4dcqb7Rb8aL43NjGGhZ0EPAdh5LfY3ghOqoiKQobpCWsk-N-5s6OJC9DGFJ9ik3QZzdLVEi6OfwXgVFzyaultKPK2Sza58PXEVInDrJXKat4wrnlOMbnCGdhDN-gvgaJaziIZstmz3l6GKbXeWnWgh7wxAYXhqFLExvALlx5I6O-2sPRWhIOZ4cGwEzFPD44TyDUOqIO7er9bjSsaLpmCexBcWWVaKFm0"
+              src="/domvio-wireframe.png"
               width={600}
               height={300}
               unoptimized
