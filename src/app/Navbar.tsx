@@ -4,17 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+const navItems = [
+  { name: "Domvio", path: "/domvio" },
+  { name: "Stack", path: "/stack" },
+  { name: "Archive", path: "/archive" },
+  { name: "Context", path: "/context" },
+  { name: "About", path: "/about" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: "Domvio", path: "/domvio" },
-    { name: "Stack", path: "/stack" },
-    { name: "Archive", path: "/archive" },
-    { name: "Context", path: "/context" },
-    { name: "About", path: "/about" },
-  ];
 
   return (
     <nav className="w-full sticky top-0 bg-background border-b border-primary z-50">
