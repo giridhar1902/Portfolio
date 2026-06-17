@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ExecutionStackCard } from "./ExecutionStackCard";
 
 export default function Home() {
   return (
@@ -92,30 +93,18 @@ export default function Home() {
           Execution Stack
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-medium">
-          <div className="border border-primary p-medium bg-bg-base hover:-translate-y-1 transition-transform duration-200">
-            <h3 className="font-subheader-h3 text-subheader-h3 mb-tight text-primary">
-              AI Tooling
-            </h3>
-            <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-              Claude Code + Cursor for frontend acceleration and debugging.
-            </p>
-          </div>
-          <div className="border border-primary p-medium bg-bg-base hover:-translate-y-1 transition-transform duration-200">
-            <h3 className="font-subheader-h3 text-subheader-h3 mb-tight text-primary">
-              Pragmatism
-            </h3>
-            <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-              High-friction utility over theoretical perfection.
-            </p>
-          </div>
-          <div className="border border-primary p-medium bg-bg-base hover:-translate-y-1 transition-transform duration-200">
-            <h3 className="font-subheader-h3 text-subheader-h3 mb-tight text-primary">
-              Adaptability
-            </h3>
-            <p className="font-body-secondary text-body-secondary text-on-surface-variant">
-              AI as senior engineering partner, not autocomplete.
-            </p>
-          </div>
+          <ExecutionStackCard
+            title="AI Tooling"
+            description="Claude Code + Cursor for frontend acceleration and debugging."
+          />
+          <ExecutionStackCard
+            title="Pragmatism"
+            description="High-friction utility over theoretical perfection."
+          />
+          <ExecutionStackCard
+            title="Adaptability"
+            description="AI as senior engineering partner, not autocomplete."
+          />
         </div>
       </section>
 
