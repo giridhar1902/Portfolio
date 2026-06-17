@@ -1,5 +1,12 @@
 import Image from "next/image";
 
+
+const CORE_LOOP_ITEMS = [
+  { id: "01 / REMIND", description: "Automated WhatsApp reminder sent on schedule" },
+  { id: "02 / COLLECT", description: "UPI payment link in the same thread" },
+  { id: "03 / RECEIPT", description: "Auto-generated receipt sent on confirmation" }
+];
+
 export default function DomvioCaseStudy() {
   return (
     <div className="w-full max-w-7xl mx-auto px-medium md:px-generous py-generous gap-generous flex flex-col flex-grow">
@@ -60,31 +67,17 @@ export default function DomvioCaseStudy() {
       <section className="flex flex-col gap-medium border-t border-primary pt-generous">
         <h2 className="font-header-h2 text-header-h2 text-primary">The Core Loop</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium items-center">
-          <div className="flex flex-col gap-medium">
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                01 / REMIND
+                    <div className="flex flex-col gap-medium">
+            {CORE_LOOP_ITEMS.map((item, idx) => (
+              <div key={idx} className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
+                <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
+                  {item.id}
+                </div>
+                <div className="font-body-primary text-body-primary pt-tight">
+                  {item.description}
+                </div>
               </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                Automated WhatsApp reminder sent on schedule
-              </div>
-            </div>
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                02 / COLLECT
-              </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                UPI payment link in the same thread
-              </div>
-            </div>
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                03 / RECEIPT
-              </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                Auto-generated receipt sent on confirmation
-              </div>
-            </div>
+            ))}
           </div>
           <div className="flex justify-center items-center p-tight bg-surface-container border border-primary relative h-[450px] overflow-hidden">
             <Image
