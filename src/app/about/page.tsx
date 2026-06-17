@@ -39,7 +39,7 @@ export default function About() {
         {/* Right Column: Narrative Text */}
         <div className="col-span-1 md:col-span-7 flex flex-col gap-medium pt-tight">
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
-            I'm a founder building Domvio — a WhatsApp-first rent collection platform for small landlords in India. Mechanical engineering graduate who never wrote a line of code before AI tools made that irrelevant.
+            I&apos;m a founder building Domvio — a WhatsApp-first rent collection platform for small landlords in India. Mechanical engineering graduate who never wrote a line of code before AI tools made that irrelevant.
           </p>
           <div className="w-full h-px bg-border-muted"></div>
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
