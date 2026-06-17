@@ -93,7 +93,6 @@ export default function DomvioCaseStudy() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnfK10M_rxDOF2r2jpziX_PQn4PEO1E4lnOXwbfy7xQtcMSWP6yNw72tcp70ZkFYJVkrzgkdGIfvVwIuKJgns4s4XBNqGiaZo8P7JkR3_2J4Urfvy3GGOu_gwyeBuDSxrG82KpXymeI-sIH9kkMiZqTucYlVHWCJ4VPcXuNZF3RmQ9hKNyZ0YvgMxjb06YcnXYY3qfxIN6vcHFdgCyl5yz91dThIFEC027jVgT-UtNjco4EEjsF5qOc3mHITihkXqjgvMZ-JSvN4"
               width={400}
               height={500}
-              unoptimized
             />
           </div>
         </div>
@@ -123,7 +122,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/login-phone.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
@@ -149,7 +147,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/account-type.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
@@ -175,7 +172,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/signup-landlord.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
