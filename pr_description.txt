@@ -1,0 +1,4 @@
+🎯 **What:** Removed the `unoptimized` prop from all `<Image>` components across the application (specifically in `src/app/domvio/page.tsx`, `src/app/about/page.tsx`, and `src/app/page.tsx`).
+💡 **Why:** Removing the `unoptimized` prop allows Next.js to automatically optimize the images (resizing, converting to WebP/AVIF, etc.), which improves performance and loading times. The prop was explicitly requested to be removed for this code health fix.
+✅ **Verification:** Verified the application builds successfully via `npm run build` with the `output: "export"` config, and `npm run dev` serves the pages properly. Removing this redundant prop maintains the behavior as dictated by `next.config.ts`.
+✨ **Result:** Better performance (when optimizations are enabled) and a cleaner component configuration.
