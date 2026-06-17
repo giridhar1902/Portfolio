@@ -51,7 +51,7 @@ export default function DomvioCaseStudy() {
         </div>
         <div className="md:w-2/3">
           <p className="font-body-primary text-body-primary text-on-surface leading-relaxed">
-            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don't exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
+            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don&apos;t exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
           </p>
         </div>
       </section>
@@ -93,7 +93,6 @@ export default function DomvioCaseStudy() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnfK10M_rxDOF2r2jpziX_PQn4PEO1E4lnOXwbfy7xQtcMSWP6yNw72tcp70ZkFYJVkrzgkdGIfvVwIuKJgns4s4XBNqGiaZo8P7JkR3_2J4Urfvy3GGOu_gwyeBuDSxrG82KpXymeI-sIH9kkMiZqTucYlVHWCJ4VPcXuNZF3RmQ9hKNyZ0YvgMxjb06YcnXYY3qfxIN6vcHFdgCyl5yz91dThIFEC027jVgT-UtNjco4EEjsF5qOc3mHITihkXqjgvMZ-JSvN4"
               width={400}
               height={500}
-              unoptimized
             />
           </div>
         </div>
@@ -123,7 +122,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/login-phone.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
@@ -149,7 +147,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/account-type.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
@@ -175,7 +172,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/signup-landlord.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
@@ -205,7 +201,7 @@ export default function DomvioCaseStudy() {
 
       {/* Tech Stack Section */}
       <section className="flex flex-col gap-medium border-t border-primary pt-generous pb-generous">
-        <h2 className="font-header-h2 text-header-h2 text-primary">What It's Built On</h2>
+        <h2 className="font-header-h2 text-header-h2 text-primary">What It&apos;s Built On</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium border border-primary p-medium bg-bg-base">
           <ul className="font-mono-data text-mono-data flex flex-col gap-tight text-sm">
             <li>+ React 19 + Vite</li>
@@ -239,7 +235,7 @@ export default function DomvioCaseStudy() {
               LinkedIn Outperformed Everything
             </h3>
             <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              One post — 'Everyone told me to build an app. You can't run a SaaS on WhatsApp.' — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.
+              One post — &apos;Everyone told me to build an app. You can&apos;t run a SaaS on WhatsApp.&apos; — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.
             </p>
           </div>
           <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
@@ -247,10 +243,10 @@ export default function DomvioCaseStudy() {
               02 / MESSAGING
             </div>
             <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              Features Don't Convert. Friction Does.
+              Features Don&apos;t Convert. Friction Does.
             </h3>
             <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don't care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.
+              Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don&apos;t care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.
             </p>
           </div>
           <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">

@@ -79,7 +79,7 @@ export default function Stack() {
               Research & Distribution
             </h3>
             <p className="font-body-primary text-body-primary text-text-secondary mb-medium flex-grow leading-relaxed">
-              Building repeatable research playbooks, organic content systems, and channel experiments. Track what moves numbers, cut what doesn't.
+              Building repeatable research playbooks, organic content systems, and channel experiments. Track what moves numbers, cut what doesn&apos;t.
             </p>
             <ul className="font-mono-data text-mono-data text-primary space-y-tight border-t border-border-muted pt-medium text-sm">
               <li>+ LinkedIn organic</li>
