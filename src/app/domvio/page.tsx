@@ -149,7 +149,6 @@ export default function DomvioCaseStudy() {
                   src="/domvio/account-type.jpg"
                   width={240}
                   height={520}
-                  unoptimized
                 />
               </div>
             </div>
