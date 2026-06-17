@@ -27,6 +27,8 @@ export default function Footer() {
           </a>
           <a
             href="mailto:giridhar123reddy@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
           >
             Email
