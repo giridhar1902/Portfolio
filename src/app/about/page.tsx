@@ -26,7 +26,6 @@ export default function About() {
               src="/profile.jpg"
               width={500}
               height={625}
-              unoptimized
               priority
             />
           </div>
