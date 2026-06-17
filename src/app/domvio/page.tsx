@@ -1,6 +1,33 @@
 import Image from "next/image";
 
 export default function DomvioCaseStudy() {
+  const waitlistLearnings = [
+    {
+      id: '01',
+      title: 'CHANNEL',
+      heading: 'LinkedIn Outperformed Everything',
+      description: "One post — 'Everyone told me to build an app. You can't run a SaaS on WhatsApp.' — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain > breadth of reach.",
+    },
+    {
+      id: '02',
+      title: 'MESSAGING',
+      heading: "Features Don't Convert. Friction Does.",
+      description: "Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don't care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.",
+    },
+    {
+      id: '03',
+      title: 'TIMING',
+      heading: 'Distribution Before Product',
+      description: 'The waitlist was built before Phase 1 was complete. Starting distribution early — even with nothing to sell — meant the first version launched into an audience that had already self-selected. No launch cold start.',
+    },
+    {
+      id: '04',
+      title: 'ITERATION',
+      heading: 'Engagement Tells You What to Build',
+      description: 'Comments and DMs on LinkedIn posts became the clearest signal for what the product needed. Two features added to the roadmap came directly from landlord responses to content — not from a survey or user interview session.',
+    },
+  ];
+
   return (
     <div className="w-full max-w-7xl mx-auto px-medium md:px-generous py-generous gap-generous flex flex-col flex-grow">
       
@@ -51,7 +78,7 @@ export default function DomvioCaseStudy() {
         </div>
         <div className="md:w-2/3">
           <p className="font-body-primary text-body-primary text-on-surface leading-relaxed">
-            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don't exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
+            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don&apos;t exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
           </p>
         </div>
       </section>
@@ -205,7 +232,7 @@ export default function DomvioCaseStudy() {
 
       {/* Tech Stack Section */}
       <section className="flex flex-col gap-medium border-t border-primary pt-generous pb-generous">
-        <h2 className="font-header-h2 text-header-h2 text-primary">What It's Built On</h2>
+        <h2 className="font-header-h2 text-header-h2 text-primary">What It&apos;s Built On</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium border border-primary p-medium bg-bg-base">
           <ul className="font-mono-data text-mono-data flex flex-col gap-tight text-sm">
             <li>+ React 19 + Vite</li>
@@ -231,50 +258,19 @@ export default function DomvioCaseStudy() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium">
-          <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-            <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase text-xs tracking-wider">
-              01 / CHANNEL
+          {waitlistLearnings.map((learning) => (
+            <div key={learning.id} className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
+              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase text-xs tracking-wider">
+                {learning.id} / {learning.title}
+              </div>
+              <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
+                {learning.heading}
+              </h3>
+              <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
+                {learning.description}
+              </p>
             </div>
-            <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              LinkedIn Outperformed Everything
-            </h3>
-            <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              One post — 'Everyone told me to build an app. You can't run a SaaS on WhatsApp.' — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.
-            </p>
-          </div>
-          <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-            <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase text-xs tracking-wider">
-              02 / MESSAGING
-            </div>
-            <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              Features Don't Convert. Friction Does.
-            </h3>
-            <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don't care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.
-            </p>
-          </div>
-          <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-            <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase text-xs tracking-wider">
-              03 / TIMING
-            </div>
-            <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              Distribution Before Product
-            </h3>
-            <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              The waitlist was built before Phase 1 was complete. Starting distribution early — even with nothing to sell — meant the first version launched into an audience that had already self-selected. No launch cold start.
-            </p>
-          </div>
-          <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-            <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight uppercase text-xs tracking-wider">
-              04 / ITERATION
-            </div>
-            <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              Engagement Tells You What to Build
-            </h3>
-            <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              Comments and DMs on LinkedIn posts became the clearest signal for what the product needed. Two features added to the roadmap came directly from landlord responses to content — not from a survey or user interview session.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
     </div>
