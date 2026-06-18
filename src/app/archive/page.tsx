@@ -1,5 +1,4 @@
-export default function Archive() {
-  const ledger = [
+const ledger = [
     {
       year: "2026",
       project: "Domvio Core Loop",
@@ -31,6 +30,9 @@ export default function Archive() {
       status: "Archived",
     },
   ];
+
+export default function Archive() {
+
 
   return (
     <div className="w-full max-w-7xl mx-auto px-medium md:px-generous flex flex-col flex-grow">
