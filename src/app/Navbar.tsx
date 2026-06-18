@@ -49,6 +49,8 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="mailto:giridhar123reddy@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-on-primary font-mono-data text-mono-data px-medium py-tight hover:bg-surface-tint border border-primary transition-colors inline-block"
           >
             Connect
@@ -93,6 +95,8 @@ export default function Navbar() {
           })}
           <a
             href="mailto:giridhar123reddy@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="block text-center bg-primary text-on-primary font-mono-data text-mono-data py-2 hover:bg-surface-tint border border-primary mt-2"
           >
