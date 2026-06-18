@@ -1,4 +1,10 @@
 export default function Footer() {
+  const footerLinks = [
+    { name: "GitHub", href: "https://github.com" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/giridhar-reddy-s/" },
+    { name: "Email", href: "mailto:giridhar123reddy@gmail.com" },
+  ];
+
   return (
     <footer className="w-full bg-background border-t border-primary mt-generous">
       <div className="flex flex-col md:flex-row justify-between items-center w-full px-medium md:px-generous py-medium max-w-7xl mx-auto text-primary">
@@ -9,28 +15,18 @@ export default function Footer() {
           © 2026. OPTIMIZED FOR EXECUTION.
         </div>
         <div className="flex space-x-medium font-mono-data text-mono-data uppercase">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/giridhar-reddy-s/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:giridhar123reddy@gmail.com"
-            className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
-          >
-            Email
-          </a>
+          {footerLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              {...(link.href.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
     </footer>
