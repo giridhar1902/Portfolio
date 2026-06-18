@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="w-full bg-background border-t border-primary mt-generous">
@@ -9,28 +11,28 @@ export default function Footer() {
           © 2026. OPTIMIZED FOR EXECUTION.
         </div>
         <div className="flex space-x-medium font-mono-data text-mono-data uppercase">
-          <a
+          <Link
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
           >
             GitHub
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/giridhar-reddy-s/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
           >
             LinkedIn
-          </a>
-          <a
+          </Link>
+          <Link
             href="mailto:giridhar123reddy@gmail.com"
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
           >
             Email
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
