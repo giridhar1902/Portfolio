@@ -38,7 +38,7 @@ export default function Home() {
           </Link>
           <Link
             href="/stack"
-            className="bg-transparent text-primary px-medium py-tight font-body-primary text-body-primary font-bold hover:bg-surface-container transition-colors border border-primary transition-colors inline-block"
+            className="bg-transparent text-primary px-medium py-tight font-body-primary text-body-primary font-bold hover:bg-surface-container transition-colors border border-primary inline-block"
           >
             How I Work
           </Link>
