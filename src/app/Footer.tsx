@@ -1,4 +1,13 @@
+"use client";
+
 export default function Footer() {
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const user = "giridhar123reddy";
+    const domain = "gmail.com";
+    window.location.href = `mailto:${user}@${domain}`;
+  };
+
   return (
     <footer className="w-full bg-background border-t border-primary mt-generous">
       <div className="flex flex-col md:flex-row justify-between items-center w-full px-medium md:px-generous py-medium max-w-7xl mx-auto text-primary">
@@ -26,7 +35,8 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:giridhar123reddy@gmail.com"
+            href="#"
+            onClick={handleEmailClick}
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"
           >
             Email
