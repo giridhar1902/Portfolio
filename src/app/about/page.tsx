@@ -47,7 +47,7 @@ Product Manager. Founder. AI-native builder.
           </p>
           <div className="w-full h-px bg-border-muted"></div>
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
-            I studied mechanical engineering and had no coding background, so if I couldn&apos;t ship something with AI tools, it didn&apos;t get built. That forced discipline: every feature had to be justified by what users actually did, not by technical curiosity. Before Domvio I was COO at a startup consultancy and a top revenue performer at two US-facing sales orgs, so I&apos;ve spent years listening to customers say what they need.
+            I studied mechanical engineering and had no coding background, so if I couldn&apos;t ship something with AI tools, it didn&apos;t get built. That forced discipline: every feature had to be justified by what users actually did, not by technical curiosity. Before Domvio I was a top revenue performer at two US-facing sales orgs, so I&apos;ve spent years listening to customers say what they need.
           </p>
           <div className="w-full h-px bg-border-muted"></div>
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose font-bold text-lg">

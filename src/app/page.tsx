@@ -118,15 +118,9 @@ export default function Home() {
           Years in Front of Customers
         </h2>
         <p className="font-body-primary text-body-primary text-on-surface-variant max-w-3xl">
-          Before product, I spent years in sales and operations: closing customers, hearing objections, and building workflows for operators. That is where my customer-first instinct comes from.
+          Before product, I spent years in sales: closing customers and hearing their objections firsthand. That is where my customer-first instinct comes from.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-medium">
-          <div className="border border-primary p-medium bg-bg-surface flex flex-col justify-between min-h-[160px]">
-            <p className="font-body-primary text-body-primary font-bold text-primary">COO · UnRed</p>
-            <p className="font-body-secondary text-body-secondary text-on-surface-variant pt-medium">
-              Designed investor and due-diligence workflows for early-stage startups.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-medium">
           <div className="border border-primary p-medium bg-bg-surface flex flex-col justify-between min-h-[160px]">
             <p className="font-body-primary text-body-primary font-bold text-primary">Top Revenue · Bhanzu</p>
             <p className="font-body-secondary text-body-secondary text-on-surface-variant pt-medium">
