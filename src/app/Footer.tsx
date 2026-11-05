@@ -6,11 +6,11 @@ export default function Footer() {
           GIRIDHAR REDDY
         </div>
         <div className="font-mono-data text-mono-data uppercase text-center md:text-left mb-medium md:mb-0 text-text-secondary">
-          © 2026. OPTIMIZED FOR EXECUTION.
+          © 2026. LESS CLUTTER. MORE SIGNAL.
         </div>
         <div className="flex space-x-medium font-mono-data text-mono-data uppercase">
           <a
-            href="https://github.com"
+            href="https://github.com/giridhar1902"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline hover:text-secondary opacity-80 hover:opacity-100 transition-opacity"

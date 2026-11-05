@@ -10,7 +10,7 @@ export default function About() {
           Giridhar Reddy
         </h1>
         <p className="font-subheader-h3 text-subheader-h3 text-on-surface-variant max-w-2xl leading-relaxed">
-          Founder. Product Builder. AI-Native Operator.
+Product Manager. Founder. AI-native builder.
         </p>
       </header>
 
@@ -39,15 +39,19 @@ export default function About() {
         {/* Right Column: Narrative Text */}
         <div className="col-span-1 md:col-span-7 flex flex-col gap-medium pt-tight">
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
-            I'm a founder building Domvio — a WhatsApp-first rent collection platform for small landlords in India. Mechanical engineering graduate who never wrote a line of code before AI tools made that irrelevant.
+            I build products for small operators: people who run a business from their phone and have no time to learn software. Most recently that was Domvio, a WhatsApp-first rent collection product for small landlords in India. I owned it end to end: roadmap, UX, onboarding, product marketing and distribution.
           </p>
           <div className="w-full h-px bg-border-muted"></div>
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
-            Before Domvio: COO at a startup consultancy, top revenue at two US-facing sales orgs, and enough failed experiments to know what actually moves numbers.
+            Domvio didn&apos;t start on a whiteboard. I watched family members run rental properties through a mess of WhatsApp messages, missed payments and no paper trail. The problem was real before the product was.
+          </p>
+          <div className="w-full h-px bg-border-muted"></div>
+          <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose text-lg">
+            I studied mechanical engineering and had no coding background, so if I couldn&apos;t ship something with AI tools, it didn&apos;t get built. That forced discipline: every feature had to be justified by what users actually did, not by technical curiosity. Before Domvio I was COO at a startup consultancy and a top revenue performer at two US-facing sales orgs, so I&apos;ve spent years listening to customers say what they need.
           </p>
           <div className="w-full h-px bg-border-muted"></div>
           <p className="font-body-primary text-body-primary text-primary leading-relaxed max-w-prose font-bold text-lg">
-            I care about one thing: does it remove real friction for a real person. If yes, ship it. If not, cut it.
+            My one filter: does this remove real friction for a real person? If yes, ship the simplest version. If not, cut it.
           </p>
         </div>
 
@@ -59,14 +63,20 @@ export default function About() {
           Work With Me
         </h2>
         <p className="font-body-primary text-body-primary text-on-surface-variant max-w-2xl">
-          Open to founding growth and AI-native operator roles at early-stage startups.
+          Open to product manager roles on 0→1 AI products, especially ones built for small businesses. Happy to work remote.
         </p>
         <div className="flex flex-col sm:flex-row gap-tight mt-tight w-full sm:w-auto">
+          <a
+            href="mailto:giridhar123reddy@gmail.com"
+            className="bg-primary text-on-primary font-body-primary text-body-primary px-medium py-tight font-bold hover:bg-surface-tint border border-primary transition-colors text-center w-full sm:w-auto inline-block"
+          >
+            Email Me
+          </a>
           <a
             href="https://domvio.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-on-primary font-body-primary text-body-primary px-medium py-tight font-bold hover:bg-surface-tint border border-primary transition-colors text-center w-full sm:w-auto inline-block"
+            className="bg-surface-container-lowest text-primary font-body-primary text-body-primary px-medium py-tight font-bold hover:bg-surface-container-highest border border-primary transition-colors text-center w-full sm:w-auto inline-block"
           >
             Visit Domvio
           </a>

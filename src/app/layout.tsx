@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Giridhar Reddy - Product Builder Portfolio",
-  description: "A brutalist minimalist portfolio optimized for speed and execution.",
+  title: "Giridhar Reddy — Product Manager",
+  description:
+    "Product manager for 0→1 products used by small businesses. I own UX end to end, from onboarding audits to PRDs and prototypes.",
 };
 
 export default function RootLayout({

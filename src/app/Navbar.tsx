@@ -9,10 +9,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Domvio", path: "/domvio" },
-    { name: "Stack", path: "/stack" },
+    { name: "Case Study", path: "/domvio" },
+    { name: "Onboarding Audit", path: "/onboarding" },
+    { name: "Process", path: "/process" },
     { name: "Archive", path: "/archive" },
-    { name: "Context", path: "/context" },
     { name: "About", path: "/about" },
   ];
 

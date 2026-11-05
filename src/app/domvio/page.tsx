@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DomvioCaseStudy() {
   return (
@@ -7,7 +8,7 @@ export default function DomvioCaseStudy() {
       {/* Header Section */}
       <section className="flex flex-col gap-medium pt-generous border-b border-primary pb-generous">
         <div className="font-mono-data text-mono-data uppercase text-surface-tint tracking-widest text-xs">
-          CASE STUDY — 2026
+          PRODUCT CASE STUDY · 2026 · ROLE: FOUNDER &amp; PM
         </div>
         <h1 className="font-display-h1 text-display-h1-mobile md:text-display-h1 text-primary">
           Domvio
@@ -51,8 +52,45 @@ export default function DomvioCaseStudy() {
         </div>
         <div className="md:w-2/3">
           <p className="font-body-primary text-body-primary text-on-surface leading-relaxed">
-            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don't exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
+            Small landlords in India manage 2–10 properties each. Rent collection happens over WhatsApp. Reminders are manual. Receipts don&apos;t exist. Payment confirmation is a screenshot. This is the operational baseline for millions of landlords.
           </p>
+        </div>
+      </section>
+
+      {/* Product Decisions Section */}
+      <section className="flex flex-col gap-medium border-t border-primary pt-generous">
+        <div className="flex flex-col gap-tight">
+          <h2 className="font-header-h2 text-header-h2 text-primary">Product Decisions</h2>
+          <p className="font-body-secondary text-body-secondary text-surface-tint">
+            The calls that shaped the product, including what I chose not to build.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-medium">
+          {[
+            {
+              k: "Cut",
+              t: "No native app",
+              b: "The obvious move was an app. Landlords and tenants already settle rent in WhatsApp, so the product goes where the habit is. That removed install friction completely and meant one less surface to build.",
+            },
+            {
+              k: "Scope",
+              t: "One loop, end to end",
+              b: "Remind → collect → receipt is the core every other feature depends on, so it shipped first and had to work fully before anything else was built. A narrow loop that fully works beats a broad dashboard that half works.",
+            },
+            {
+              k: "Personas",
+              t: "Two users, one entry",
+              b: "Landlords set things up and tenants pay. Both start from the same sign-up and split at role selection, so each sees only what their job needs.",
+            },
+          ].map((d) => (
+            <div key={d.t} className="border border-primary p-medium bg-bg-base flex flex-col gap-tight">
+              <div className="font-mono-data text-mono-data text-xs uppercase tracking-widest text-surface-tint">
+                {d.k}
+              </div>
+              <h3 className="font-subheader-h3 text-subheader-h3 text-primary">{d.t}</h3>
+              <p className="font-body-primary text-body-primary text-on-surface-variant text-sm leading-relaxed">{d.b}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -104,7 +142,10 @@ export default function DomvioCaseStudy() {
         <div className="flex flex-col gap-tight">
           <h2 className="font-header-h2 text-header-h2 text-primary">Onboarding & Access Workflow</h2>
           <p className="font-body-secondary text-body-secondary text-surface-tint">
-            A frictionless, mobile-first signup and verification flow designed for Indian users.
+            A mobile-first sign-up and verification flow designed for Indian users.{" "}
+            <Link href="/onboarding" className="underline text-primary hover:text-secondary">
+              I later audited it and found 4 gaps →
+            </Link>
           </p>
         </div>
 
