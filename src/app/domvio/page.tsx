@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FeatureCard } from "./FeatureCard";
+
+
+const CORE_LOOP_ITEMS = [
+  { id: "01 / REMIND", description: "Automated WhatsApp reminder sent on schedule" },
+  { id: "02 / COLLECT", description: "UPI payment link in the same thread" },
+  { id: "03 / RECEIPT", description: "Auto-generated receipt sent on confirmation" }
+];
 
 export default function DomvioCaseStudy() {
   return (
@@ -98,31 +106,17 @@ export default function DomvioCaseStudy() {
       <section className="flex flex-col gap-medium border-t border-primary pt-generous">
         <h2 className="font-header-h2 text-header-h2 text-primary">The Core Loop</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium items-center">
-          <div className="flex flex-col gap-medium">
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                01 / REMIND
+                    <div className="flex flex-col gap-medium">
+            {CORE_LOOP_ITEMS.map((item, idx) => (
+              <div key={idx} className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
+                <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
+                  {item.id}
+                </div>
+                <div className="font-body-primary text-body-primary pt-tight">
+                  {item.description}
+                </div>
               </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                Automated WhatsApp reminder sent on schedule
-              </div>
-            </div>
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                02 / COLLECT
-              </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                UPI payment link in the same thread
-              </div>
-            </div>
-            <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
-              <div className="font-mono-data text-mono-data font-bold border-b border-primary pb-tight text-xs tracking-wider">
-                03 / RECEIPT
-              </div>
-              <div className="font-body-primary text-body-primary pt-tight">
-                Auto-generated receipt sent on confirmation
-              </div>
-            </div>
+            ))}
           </div>
           <div className="flex justify-center items-center p-tight bg-surface-container border border-primary relative h-[450px] overflow-hidden">
             <Image
@@ -150,83 +144,30 @@ export default function DomvioCaseStudy() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-medium w-full mt-medium">
-          {/* Card 1 */}
-          <div className="border border-primary bg-bg-base flex flex-col h-full">
-            <div className="border-b border-primary p-tight bg-surface-container font-mono-data text-mono-data text-xs font-bold uppercase tracking-wider flex justify-between">
-              <span>01 / Phone Auth</span>
-              <span className="text-surface-tint">OTP Login</span>
-            </div>
-            <div className="p-medium flex justify-center items-center bg-surface-container-low flex-grow border-b border-primary">
-              <div className="relative w-full max-w-[240px] aspect-[9/19.5] border border-primary overflow-hidden bg-background shadow-sm">
-                <Image
-                  alt="Domvio OTP Login Interface"
-                  className="object-cover w-full h-full filter grayscale contrast-110"
-                  src="/domvio/login-phone.jpg"
-                  width={240}
-                  height={520}
-                  unoptimized
-                />
-              </div>
-            </div>
-            <div className="p-medium flex flex-col gap-tight bg-bg-base">
-              <h3 className="font-subheader-h3 text-subheader-h3 text-primary font-bold">Frictionless Sign In</h3>
-              <p className="font-body-primary text-body-primary text-on-surface text-sm leading-relaxed">
-                OTP verification via WhatsApp and SMS removes password fatigue. Standard input formats ensure rapid mobile entry.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="border border-primary bg-bg-base flex flex-col h-full">
-            <div className="border-b border-primary p-tight bg-surface-container font-mono-data text-mono-data text-xs font-bold uppercase tracking-wider flex justify-between">
-              <span>02 / Bifurcated Persona</span>
-              <span className="text-surface-tint">Role Selection</span>
-            </div>
-            <div className="p-medium flex justify-center items-center bg-surface-container-low flex-grow border-b border-primary">
-              <div className="relative w-full max-w-[240px] aspect-[9/19.5] border border-primary overflow-hidden bg-background shadow-sm">
-                <Image
-                  alt="Domvio Role Selection Interface"
-                  className="object-cover w-full h-full filter grayscale contrast-110"
-                  src="/domvio/account-type.jpg"
-                  width={240}
-                  height={520}
-                  unoptimized
-                />
-              </div>
-            </div>
-            <div className="p-medium flex flex-col gap-tight bg-bg-base">
-              <h3 className="font-subheader-h3 text-subheader-h3 text-primary font-bold">Dual-Persona Onboarding</h3>
-              <p className="font-body-primary text-body-primary text-on-surface text-sm leading-relaxed">
-                Tailored journeys branch instantly between Landlords (rent tracking & setup) and Tenants (one-tap UPI rent payment).
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="border border-primary bg-bg-base flex flex-col h-full">
-            <div className="border-b border-primary p-tight bg-surface-container font-mono-data text-mono-data text-xs font-bold uppercase tracking-wider flex justify-between">
-              <span>03 / Landlord Verification</span>
-              <span className="text-surface-tint">Details & Setup</span>
-            </div>
-            <div className="p-medium flex justify-center items-center bg-surface-container-low flex-grow border-b border-primary">
-              <div className="relative w-full max-w-[240px] aspect-[9/19.5] border border-primary overflow-hidden bg-background shadow-sm">
-                <Image
-                  alt="Domvio Landlord Verification Interface"
-                  className="object-cover w-full h-full filter grayscale contrast-110"
-                  src="/domvio/signup-landlord.jpg"
-                  width={240}
-                  height={520}
-                  unoptimized
-                />
-              </div>
-            </div>
-            <div className="p-medium flex flex-col gap-tight bg-bg-base">
-              <h3 className="font-subheader-h3 text-subheader-h3 text-primary font-bold">Landlord Activation</h3>
-              <p className="font-body-primary text-body-primary text-on-surface text-sm leading-relaxed">
-                Instant database linking via registered WhatsApp number and optional email setup for receiving periodic payout reports.
-              </p>
-            </div>
-          </div>
+          <FeatureCard
+            step="01 / Phone Auth"
+            subtitle="OTP Login"
+            imageAlt="Domvio OTP Login Interface"
+            imageSrc="/domvio/login-phone.jpg"
+            title="Frictionless Sign In"
+            description="OTP verification via WhatsApp and SMS removes password fatigue. Standard input formats ensure rapid mobile entry."
+          />
+          <FeatureCard
+            step="02 / Bifurcated Persona"
+            subtitle="Role Selection"
+            imageAlt="Domvio Role Selection Interface"
+            imageSrc="/domvio/account-type.jpg"
+            title="Dual-Persona Onboarding"
+            description="Tailored journeys branch instantly between Landlords (rent tracking & setup) and Tenants (one-tap UPI rent payment)."
+          />
+          <FeatureCard
+            step="03 / Landlord Verification"
+            subtitle="Details & Setup"
+            imageAlt="Domvio Landlord Verification Interface"
+            imageSrc="/domvio/signup-landlord.jpg"
+            title="Landlord Activation"
+            description="Instant database linking via registered WhatsApp number and optional email setup for receiving periodic payout reports."
+          />
         </div>
       </section>
 
@@ -246,7 +187,7 @@ export default function DomvioCaseStudy() {
 
       {/* Tech Stack Section */}
       <section className="flex flex-col gap-medium border-t border-primary pt-generous pb-generous">
-        <h2 className="font-header-h2 text-header-h2 text-primary">What It's Built On</h2>
+        <h2 className="font-header-h2 text-header-h2 text-primary">What It&apos;s Built On</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-medium w-full mt-medium border border-primary p-medium bg-bg-base">
           <ul className="font-mono-data text-mono-data flex flex-col gap-tight text-sm">
             <li>+ React 19 + Vite</li>
@@ -280,7 +221,7 @@ export default function DomvioCaseStudy() {
               LinkedIn Outperformed Everything
             </h3>
             <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              One post — 'Everyone told me to build an app. You can't run a SaaS on WhatsApp.' — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.
+              One post — &apos;Everyone told me to build an app. You can&apos;t run a SaaS on WhatsApp.&apos; — hit 15,751 impressions and reached 9,928 members organically. 105 reactions, 103 profile visits, 8 new followers from a single post. Zero paid reach. The pattern was consistent: documenting the contrarian build decision outperformed every promotional post. Landlords who felt the problem being described was their problem converted. Specificity of pain &gt; breadth of reach.
             </p>
           </div>
           <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
@@ -288,10 +229,10 @@ export default function DomvioCaseStudy() {
               02 / MESSAGING
             </div>
             <h3 className="font-subheader-h3 text-subheader-h3 text-primary mt-2">
-              Features Don't Convert. Friction Does.
+              Features Don&apos;t Convert. Friction Does.
             </h3>
             <p className="font-body-primary text-body-primary text-on-surface mt-2 leading-relaxed text-sm">
-              Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don't care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.
+              Posts about WhatsApp reminders and UPI got traction. Posts about the product got ignored. The insight: landlords don&apos;t care about software. They care about not chasing tenants for rent. Lead with the problem they already hate, not the solution you built.
             </p>
           </div>
           <div className="border border-primary p-medium flex flex-col gap-base bg-bg-base">
